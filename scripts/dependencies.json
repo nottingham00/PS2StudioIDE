@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "platform": "windows-x64",
+  "host": [
+    {
+      "name": "Git",
+      "winget": "Git.Git",
+      "required": true
+    },
+    {
+      "name": "CMake",
+      "winget": "Kitware.CMake",
+      "required": true
+    },
+    {
+      "name": "Ninja",
+      "winget": "Ninja-build.Ninja",
+      "required": true
+    },
+    {
+      "name": "Python",
+      "winget": "Python.Python.3.13",
+      "required": true
+    },
+    {
+      "name": "MSYS2 / GNU Make",
+      "winget": "MSYS2.MSYS2",
+      "post_install": "pacman -S --needed --noconfirm make",
+      "required": true
+    },
+    {
+      "name": "Visual Studio Build Tools 2022",
+      "winget": "Microsoft.VisualStudio.2022.BuildTools",
+      "required": true,
+      "workload": "Microsoft.VisualStudio.Workload.VCTools"
+    },
+    {
+      "name": "Qt",
+      "installer": "aqtinstall",
+      "default_version": "6.11.1",
+      "architecture": "win64_msvc2022_64",
+      "required": true
+    }
+  ],
+  "ps2": [
+    {
+      "name": "PS2DEV",
+      "source": "https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-windows-latest.tar.gz",
+      "install_root": "C:\\ps2dev",
+      "required": true
+    },
+    {
+      "name": "PS2SDK",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "gsKit",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "EE toolchain",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "IOP toolchain",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "DVP/VU toolchain",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "ps2client",
+      "provided_by": "PS2DEV",
+      "required": true
+    },
+    {
+      "name": "Tyra Engine",
+      "git": "https://github.com/h4570/tyra",
+      "path": "C:\\tyra",
+      "env": "TYRA",
+      "required": false
+    }
+  ],
+  "optional": [
+    {
+      "name": "PCSX2",
+      "winget": "PCSX2Team.PCSX2",
+      "required": false
+    },
+    {
+      "name": "LLVM / clangd",
+      "winget": "LLVM.LLVM",
+      "required": false
+    },
+    {
+      "name": "Git LFS",
+      "winget": "GitHub.GitLFS",
+      "required": false
+    },
+    {
+      "name": "Assimp CLI or Blender",
+      "purpose": "glTF/FBX/DAE to OBJ conversion",
+      "required": false
+    }
+  ]
+}

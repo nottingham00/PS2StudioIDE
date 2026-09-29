@@ -1,0 +1,11 @@
+{
+  "bones": [
+    {"name":"root","parent":-1,"inverseBind":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]}
+  ],
+  "vertices": [
+    {"position":[-1,0,0],"uv":[0,1],"bones":[0,0,0,0],"weights":[1,0,0,0]},
+    {"position":[1,0,0],"uv":[1,1],"bones":[0,0,0,0],"weights":[1,0,0,0]},
+    {"position":[0,2,0],"uv":[0.5,0],"bones":[0,0,0,0],"weights":[1,0,0,0]}
+  ],
+  "indices":[0,1,2]
+}
